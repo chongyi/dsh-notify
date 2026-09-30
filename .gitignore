@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# npm artifacts
+.npm-cache/
+*.tgz
+
+# logs / OS noise
+npm-debug.log*
+Thumbs.db
+.DS_Store
+
+# local scratch (never commit: draft reports, probe scripts, one-off artifacts)
+temp/

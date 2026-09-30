@@ -1,0 +1,77 @@
+{
+  "name": "dsh-notify",
+  "version": "0.1.0",
+  "description": "DSH 0.2 桌面消息提醒插件：模型需要你操作（审批/方案确认/提问）或回复完成时，用系统通知 + 提示音 + 标签页标题提醒你；设置页可开关并切换通知语言。Desktop notification & sound alerts for DeepSeek Harness 0.2 web — toast, chime and a tab-title marker when the agent needs your input (approval / plan review / question) or a reply finishes; toggleable from Settings with zh/en notification language. Independent re-implementation designed after dsh-notify-me.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-web",
+    "notification",
+    "desktop-notification",
+    "notify",
+    "notifications",
+    "alerts",
+    "reminder",
+    "reminders",
+    "message-alert",
+    "needs-your-input",
+    "approval-alert",
+    "background-alert",
+    "桌面通知",
+    "消息提醒",
+    "可操作提醒",
+    "提醒插件",
+    "需要你操作",
+    "回复完成提醒",
+    "后台完成提醒",
+    "提醒"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node smoke/smoke-test.cjs",
+    "pack": "npm pack --dry-run"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "chongyi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chongyi/dsh-notify.git"
+  },
+  "homepage": "https://github.com/chongyi/dsh-notify#readme",
+  "bugs": {
+    "url": "https://github.com/chongyi/dsh-notify/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.0 <0.3.0"
+  }
+}
